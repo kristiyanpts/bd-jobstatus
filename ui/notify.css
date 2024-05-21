@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.status-container {
+  position: absolute;
+  height: 7vh;
+  width: 40vh;
+  margin: 0 auto;
+  right: 0;
+  top: 50%;
+  overflow: hidden;
+  z-index: 9999999999;
+  border-radius: 0.4vw;
+  padding: 1.2vh 1vw;
+  transform: translate(0, -50%);
+  right: 10px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.status-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.48vh;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid gray;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.notification-title {
+  color: white;
+  text-align: left;
+  font-size: 22px;
+  text-align: center;
+}
+
+.notification-time,
+.notification-time-new {
+  font-size: 1.5vh;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+}
+
+.notification-text {
+  position: relative;
+  width: 100%;
+  font-size: 1.4vh;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.notification-text {
+  max-width: 100%;
+}
+
+.status-header {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-header .title {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  color: #38a2e5;
+
+  text-shadow: 0px 0px 6px rgba(56, 162, 229, 1);
+  top: 0.5px;
+  font-size: 22px;
+}
+
+.status-header .line {
+  position: absolute;
+  width: 90%;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(128, 128, 128, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2222222;
+  bottom: -3.5px;
+}
+
+.status-header .line .inner-line {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(56, 162, 229, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2222222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
