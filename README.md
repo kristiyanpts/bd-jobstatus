@@ -5,7 +5,7 @@ FiveM Job Status scripts that serves the purpose to show you the progress of you
 # 📙 Usage
 
 ```lua
-## Exports (Client)
+-- Exports (Client)
 
 -- Shows the job stage container with the given data
 exports["bd-jobstatus"]:ShowJobStage(data)
@@ -16,7 +16,7 @@ exports["bd-jobstatus"]:UpdateJobStage(data)
 -- Hides the job stage container
 exports["bd-jobstatus"]:HideJobStage()
 
-## Events (Client)
+-- Events (Client)
 
 -- Shows the job stage container with the given data
 TriggerEvent("bd-jobstatus:client:show-job-stage", data)
@@ -27,7 +27,7 @@ TriggerEvent("bd-jobstatus:client:update-job-stage", data)
 -- Hides the job stage container
 TriggerEvent("bd-jobstatus:client:hide-job-stage")
 
-## Events (Server) - No server events are supported for this resource, but you can trigger the event on the client you want, sooo its a win win.. :D
+-- Events (Server) - No server events are supported for this resource, but you can trigger the event on the client you want, sooo its a win win.. :D
 
 -- Shows the job stage container with the given data on the given player source
 TriggerClientEvent("bd-jobstatus:client:show-job-stage", source, data)
@@ -38,16 +38,16 @@ TriggerClientEvent("bd-jobstatus:client:update-job-stage", source, data)
 -- Hides the job stage container on the given player source
 TriggerClientEvent("bd-jobstatus:client:hide-job-stage", source)
 
-## Params Explenation
+-- Params Explenation
 
-data - table, contains status data
-data.job - string, Header text
-data.title - string/html, The description of the job status (Supports HTML, so you can use <br/> to split the text in new lines)
-data.hasStatus - boolean, Whether or not you job has a status message (Check the screenshots to get a good idea of that this is)
-data.statusMessage - string/html, The status message located on the left (Only if hasStatus is true)
-data.statusValue - string/number/html, The status value located on the right (Only if hasStatus is true)
+-- data - table, contains status data
+-- data.job - string, Header text
+-- data.title - string/html, The description of the job status (Supports HTML, so you can use <br/> to split the text in new lines)
+-- data.hasStatus - boolean, Whether or not you job has a status message (Check the screenshots to get a good idea of that this is)
+-- data.statusMessage - string/html, The status message located on the left (Only if hasStatus is true)
+-- data.statusValue - string/number/html, The status value located on the right (Only if hasStatus is true)
 
-## Params Examples
+-- Params Examples
 
 -- 1. If the job has a status message
 {
