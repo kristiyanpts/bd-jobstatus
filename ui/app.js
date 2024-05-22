@@ -1,15 +1,12 @@
 $(function () {
   window.addEventListener("message", function (e) {
     if (e.data.action === "ShowJobStage") {
-      console.log("vlizam li?");
       $(".status-header .title").html(e.data.notification.job);
       $(".status-top .notification-title").html(e.data.notification.stage);
       $(".status-header .line .inner-line").css(
         "width",
         $(".status-header .title").width() + 100 + "px"
       );
-
-      console.log($(".status-header .title").width());
 
       if (e.data.notification.hasStatus == true) {
         $(".status-top .notification-text .status-message").html(
@@ -24,8 +21,6 @@ $(function () {
       }
 
       $(".status-container").css("opacity", 1);
-
-      console.log("minah li?");
     } else if (e.data.action === "UpdateJobStage") {
       $(".status-header .title").html(e.data.notification.job);
       $(".status-top .notification-title").html(e.data.notification.stage);
