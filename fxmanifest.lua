@@ -15,3 +15,7 @@ files {
 	'ui/*.css',
 	'ui/*.js',
 }
+
+escrow_ignore {
+	"client/*.lua",
+}
